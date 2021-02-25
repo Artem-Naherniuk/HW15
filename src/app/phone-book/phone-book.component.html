@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container">
+    <div class="inputs">
+        <input id="inp" type="text" placeholder="Search text goes here" [(ngModel)]="search" name="search" (keyup)="check()">
+        <button id="add" (click)="add()">Add Contact</button>
+    </div>
+    <table class="allTable">
+        <tr>
+            <th><b>First name</b></th>
+            <th><b>Last name</b></th>
+            <th><b>Number</b></th>
+            <th><b>Edit</b></th>
+            <th><b>Delete</b></th>
+        </tr>
+        <hr>
+        <tr *ngFor="let all of allContacts | searching : search ;index as i"  > 
+            <td>{{all.fName}}</td>
+            <td>{{all.lName}}</td>
+            <td>{{all.phoneN}}</td>
+            <td><button id="edit" (click)="edit(i)" [disabled]="disableButtons">Edit</button></td>
+            <td><button id="delete" (click)="delete(i)" [disabled]="disableButtons">Delete</button></td>
+        </tr>
+        
+    </table>
+</div>
+<div class="alerCreate" [style.visibility]="visibleCreate ? 'visible' : 'hidden'">
+    <input class="addContact" type="text" placeholder="First name" [(ngModel)]="fN" name="fN">
+    <input class="addContact" type="text" placeholder="Last Name" [(ngModel)]="lN" name="lN">
+    <input class="addContact" type="text" placeholder="Phone number" [(ngModel)]="pN" name="pN">
+    <button id="addFinal" (click)="addFinal()">Add Contact</button>
+</div>
+<div class="alertEdit" [style.visibility]="visibleEdit ? 'visible' : 'hidden'">
+    <input class="addContact" type="text" placeholder="First name" [(ngModel)]="fNedit" name="fNedit">
+    <input class="addContact" type="text" placeholder="Last Name" [(ngModel)]="lNedit" name="lNedit">
+    <input class="addContact" type="text" placeholder="Phone number" [(ngModel)]="pNedit" name="pNedit">
+<button id="finalEdit" (click)="finalEdit()">Edit</button>
+</div>
+
+<div class="erorAlert" [style.visibility]="visibleAlertEror ? 'visible' : 'hidden'">
+    <span id="erorText">One of inputs is empty</span>
+    <button id="close" (click)="close()">Close</button>
+</div>
+

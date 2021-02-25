@@ -1,0 +1,123 @@
+.container{
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#inp{
+    width: 80%;
+    height: 35px;
+    margin-right: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+#add{
+    background-color: rgb(63, 205, 50);
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.allTable{
+    width: 100%;
+}
+
+tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 7px;
+}
+
+
+td, th{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td{
+    font-size: 15px;
+}
+
+.alerCreate, .alertEdit{
+    width: 35%;
+    height: 30%;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    position: absolute;
+    top: center;
+    left: 32.5%;
+    visibility: hidden;
+}
+
+.addContact{
+    width: 60%;
+    height: 35px;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+}
+
+#addFinal, #finalEdit{
+    width: 70px;
+    height: 35px;
+    border: 0.5px solid #000;
+    background-color: rgb(63, 205, 50);
+    border-radius: 5px;
+}
+
+#edit{
+    width: 50px;
+    height: 30px;
+    background-color: orange;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+}
+
+#delete{
+    width: 50px;
+    height: 30px;
+    background-color: red;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+}
+
+.erorAlert{
+    width: 30%;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: relative;
+    top: center;
+    left: 35%;
+}
+
+#erorText{
+    margin-bottom: 20px;
+}
+
+#close{
+    width: 80px;
+    height: 25px;
+    background-color: rgb(63, 205, 50);
+    border: 1px solid #000;
+    border-radius: 5px;
+}
